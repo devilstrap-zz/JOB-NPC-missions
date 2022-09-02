@@ -1,4 +1,4 @@
--- MIT License
+-- MIT License applicable to THIS FILE ONLY
 
 -- Copyright (c) 2020 PiterMcFlebor
 

@@ -3,7 +3,8 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'Salty'
-description 'A heromission script for FiveM'
+description 'A npcmission script for FiveM'
+-- https://github.com/LSD-RP/npcmissions
 
 lua54 'yes'
 
