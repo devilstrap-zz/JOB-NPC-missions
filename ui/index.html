@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>npcmissions</title>
+		<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'>
+		<link rel="stylesheet" href="libraries/vuetify.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<v-app id="npcmissions">
+			<v-content>
+				<div id="NPC_SelectMissions" v-show="showMissionsSelector">
+					<div id="NPC_Missions_Base">
+						<div id="NPC_Missions_Header">
+							Choose a mission
+							<v-btn color="red" absolute right top small fab dark @click="CloseMissionsMenu()">
+								<v-icon>close</v-icon>
+							</v-btn>
+						</div>
+						<div id="NPC_Missions_Body">
+							<v-container fluid grid-list-xs>
+								<v-layout pa-1 row wrap>
+									<v-flex xs3>
+										<v-card style="border: 1px solid rgba(0, 122, 214, 1);">
+											<v-card-title primary-title>
+												<h3>Survival</h3>
+											</v-card-title>
+											<v-card-text>
+												<table>
+													<tr>
+														<img src="img/Cathrine.png">
+													</tr>
+													<tr>
+														<td>Rounds:</td>
+														<td>5</td>
+													</tr>
+													<tr>
+														<td>Location:</td>
+														<td>Sandy Shores</td>
+													</tr>
+													<tr>
+														<td>Recommended Weapon:</td>
+														<td>Pistol</td>
+													</tr>
+													<tr>
+														<td colspan="2"><small><i><b>Difficulty: </b>Easy</i></small></td>
+													</tr>
+													<tr>
+														<td colspan="2"><small><i><b>Cost:</b> <b style="color: green;">$1000</b></i></small></td>
+													</tr>
+												</table>
+											</v-card-text>
+											<v-card-actions>
+												<v-btn color="green" block dark @click="ChooseSurvival()">
+													Begin
+												</v-btn>
+											</v-card-actions>
+										</v-card>
+									</v-flex>
+
+									<!-- <v-flex xs3>
+										<v-card style="border: 1px solid rgba(0, 122, 214, 1);">
+											<v-card-title primary-title>
+												<h3> Tatiana</h3>
+											</v-card-title>
+											<v-card-text>
+												<table>
+													<tr>
+														<img src="img/Tatiana.png">
+													</tr>
+													<tr>
+														<td>Age:</td>
+														<td>27</td>
+													</tr>
+													<tr>
+														<td>Height (cm):</td>
+														<td>170</td>
+													</tr>
+													<tr>
+														<td>Weight (kg):</td>
+														<td>60</td>
+													</tr>
+													<tr>
+														<td>Cup size:</td>
+														<td>C</td>
+													</tr>
+													<tr>
+														<td>Piercings:</td>
+														<td>No</td>
+													</tr>
+													<tr>
+														<td>Tattoos:</td>
+														<td>Yes</td>
+													</tr>
+													<tr>
+														<td colspan="2"><small><i><b>Services:</b> Escort, OutCall</i></small></td>
+													</tr>
+													<tr>
+														<td colspan="2"><small><i><b>Reviews:</b> <b style="color: green;">Excellent</b></i></small></td>
+													</tr>
+												</table>
+											</v-card-text>
+											<v-card-actions>
+												<v-btn color="green" block dark @click="ChooseTatiana()">
+													Order
+												</v-btn>
+											</v-card-actions>
+										</v-card>
+									</v-flex> -->
+
+
+								</v-layout>
+							</v-container>
+						</div>
+					</div>
+				</div>
+
+			</v-content>
+		</v-app>
+		<v-app id="notification" v-show="showing">
+			<v-content>
+				<div id="notification_main"  >
+					<div id = "notification_message" v-html="this.text">
+					</div>
+				</div>
+			</v-content>
+		</v-app>
+		<script src="libraries/axios.min.js"></script>
+		<script src="libraries/vue.min.js"></script>
+		<script src="libraries/vuetify.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
